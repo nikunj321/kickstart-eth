@@ -1,4 +1,5 @@
 import Web3 from 'web3';
+import secret from './secret';
 
 // if(window.ethereum) {
 //     window.web3 = new Web3(ethereum);
@@ -26,7 +27,7 @@ if(typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
     web3 = new Web3(window.web3.currentProvider);
 } else {
     const provider = new Web3.providers.HttpProvider(
-        'https://rinkeby.infura.io/v3/482ab3d859be441ab018517f2654b346'
+        secret.api
     );
 
     web3 = new Web3(provider);

@@ -1,10 +1,11 @@
+import secret from './secret';
 const HDWalletProvider = require('truffle-hdwallet-provider');
 const Web3 = require('web3');
 const compiledFactory = require('./build/CampaignFacotory.json');
 
 const provider = new HDWalletProvider(
-    'sing observe organ case power brief crash tone tissue winter clog genius',
-    'https://rinkeby.infura.io/v3/482ab3d859be441ab018517f2654b346'
+    secret.mnemonics,
+    secret.api
 );
 
 const web3 = new Web3(provider);
